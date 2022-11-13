@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navajo leather Design</title>
+    <link rel="icon" href="./pagina/asset/img/img/navajo.ico">
+    <link rel="stylesheet" href="./pagina/asset/img/css/style.cs">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    
+    
+</head>
+<body>
+<!--GRIDS-->
+    <nav>   
+
+    </nav>
+    <header></header>
+    <section class="productos"></section>
+    <section class="ofertas"></section>
+    <aside></aside>
+    <footer></footer>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="padre">
+        <div class="item1"><h3>Lorem ipsum dolor sit amet.</h3></div>
+        <div class="item2"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam, laudantium.</p></div>
+        <div class="item3"><img src="./pagina/asset/img/img/paisaje-800x409.jpg" alt=""></div>
+        <div class="item4"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--FLEXBOX-->
+    <div class="cajaPadre" >
+    <div class="cajaHijo1"></div>
+    <div class="cajaHijo2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut maxime similique ullam, autem dolore in ea quasi quos consectetur totam, fuga tenetur illo eum eveniet doloribus temporibus harum obcaecati officiis.</p>
+    </div>
+    <div class="cajaHijo3"></div>
+</div>
+
+
+
+
+
+
+
+
+
+    <nav class="navgar">
+        <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Productos</a>
+                <ul>
+                    <li>subitems</li>
+                </ul>    
+            </li>
+            <li><a href="">Quienes Somos?</a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+               
+        </ul>   
+
+    </nav>
+
+
+
+
+
+
+<!--PROPIEDASDES CSS:
+COLOR,FRONT-SIZE,FRONT-WEIGHT,TEXT ALIGN,FONT-FAMILY,TEXT-DECORATION-LINE,LINE-HIGHT,BACKGROUND-COLOR,PADDING,BACKGROUND-IMAGE: URL,BACKGROUND-SIZE,BACKGROUND-ATTACHMENT,BACKGROUND-POSITION,OPACITY,-->
+    <h1 class="titulo">Lorem ipsum dolor sit amet.</h1>
+
+    <P class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, commodi veritatis repellat cum, eaque unde pariatur fugiat quam id expedita deserunt fuga, officia molestias architecto dignissimos sapiente adipisci iusto aliquam!</P>
+    <div class="imagen">
+    </div>
+    <div id="chiquita">
+
+    </div>
+
+
+    
+    
+    
+  <hr><hr>  
+<!--LISTAS:<ol>list con numero,
+    <ul lista con punto,
+    <li linea,
+    <hr>linea separadora<-->
+    <ol>
+        <li>asiganturas</li>
+        <li>meterias</li>       
+    </ol>
+    <ul>
+        <li>alfajores</li>
+        <li>caramelos</li>
+    </ul>
+    <ol>
+        <li>autos
+            <ul>
+                <li>deportivos</li>
+                <li>familiares</li>
+            </ul>
+        </li>
+    </ol>
+<hr>
+<!--FORMULARIOS:
+<form>iniciar el formulario(METHOD:get:envia la informacion a la url,post:enviar informacion para la parte backend.ENTYPE:multipart:enviar varios archivos)
+<imput>casillero para ingresar informacion(type:text,password,number,Name:nombre del input ID:identificacion del casillero, Placeholder:poner informacion en texto no modificable en el casillero,Required:hacer obligatorio completar el campo)
+<label>texto informativo del input(for:conecta el label con el input)
+<textarea>casilla modificable de tamaño
+<br>agregar espacio
+<fieldset> para agrupar contenido
+<legend>darle nombre al formulario con el fieldset-->
+    <form method="get" enctype="multipart/form-data">
+        <fieldset>
+            <legend>nombres</legend>
+                <label for="nombre">nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="ingrese su nombre" required>
+                <input type="submit" value="enviar"></input>
+                <br><br>
+                <label for="hombre">hombre</label>
+                <input type="radio" name="sexo" id="hombre" value="hombre"
+                ><label for="mujer">mujer</label>
+                <input type="radio" name="sexo" id="mujer" value="mujer">
+                <br><br>
+                <label for="password">contraseña</label>
+                <input type="password" name="password" placeholder="contraseña" id="password" required>
+                <input type="submit" name="enviar">
+                <br><br>
+                <label >Opinion:</label>
+                <textarea name="opinion" placeholder="opinion" id="opinion"></textarea>
+                <input type="submit" name="enviar" id="submit">
+                <br><br>
+                <select name="talles">
+                    <option value="s">small</option>
+                    <option value="xs">xs</option>
+                    <option value="L">large</option>
+                </select>
+
+                <br><br>
+                <input type="submit" value="enviar">
+                <input type="reset" value="resetear">
+        </fieldset> 
+    </form>
+    <hr>
+    
+    <h1>libro</h1>
+    <nav>
+        <p><a href="#cap-1">capitlo 1</a></p>
+    </nav>
+<article id="cap-1"></article>
+    <h2 >capitulo 1</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime molestias illo doloremque libero soluta commodi placeat dicta alias facilis cupiditate. Facere iusto nisi odit dignissimos fugit vero, quis laudantium expedita?</p>
+
+
+<hr>
+<!--TABLAS:<table para crear la estruc de tabla,<caption>nombre de la tabla,
+<th encabezado,
+<tr> fila,
+<td> item <-->
+    <table border="4px">
+        <caption>Lista de alumnos</caption>
+        <tr>
+            <th>nombre</th>
+            <th id="facil">apellido</th>
+            <th class="complicado">edad</th>
+            <th>estatura</th>
+        </tr>
+        <tr>
+            <td>bautista</td>
+            <td>capano</td>
+            <td>23</td>
+            <td>173cm</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td>total de asiganturas</td>
+                <td>12</td>
+            </tr>
+        </tfoot>
+    </table>
+<hr>    
+
+<!--ENLACES:
+<a>enlace para viajar(href:ruta en donde queremos ir puede ser archivos internos o https,Target="_blank":para abrir el link en otra pestaña,ID:para viajar de un lugar a otro con el enlace interno se usa el #)-->
+    <header>
+        <a href="#abajo">pie de pagina/a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a>
+                </li>
+                <li><a href="pages/quienes somos.html" target="_blank">quienes somos</a></li>
+                <li><a href="pages/contactos.html">contactos</a></li>
+                <li><a href="pages/productos.html">productos</a></li>
+            </ul>
+            <a href="https://www.instagram.com/" target="_blank"><img src="./pagina/asset/img/insta-01.png" alt="imagen para entrar a intagram"></a>
+        </nav>
+    </header>
+<footer id="abajo">
+    <h4> Seguinos en nuestras redes sociales</h4>
+    <ul>
+        <li><a href="index.html">instagram</a></li>
+        <li><a href="pages/quienes somos.html">facebook<a></li>
+        <li><a href="pages/contactos.html">whatsapp</a></li>
+        <li><a href="pages/productos.html">linkdin</a></li>
+    </ul>
+   
+    </main>
+</footer>
+<hr><hr>
+<!--MULTIMEDIA
+<inframe>para subir videos con el url
+<video>subir videos en archivos internos(Autoplay:para  reproducir el viddeo automaticamente,Control:para agregar panel de control al video,Muted:para mutear.Loop:para repetir el video) 
+<audio> igual que el video       -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3PcIJKd1PKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<video src="./pagina/asset/img/video/LostOnYou.mp4" controls muted loop></video>
+<audio src=""></audio>
+
+<!--BEM-->
+<div class="card">
+    <img src="./pagina/asset/img/img/tele2.jpg" alt="" class="card__imagen">
+    <h4 class="card__titulo">Lorem, ipsum dolor.</h4>
+    <p class="card__desc">Lorem ipsum dolor sit amet consectetur.</p>
+    <button class="card__btn">Comprar</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolores tempora ut ratione quia voluptatum, similique laborum placeat reprehenderit cupiditate, maxime, consequatur harum perferendis accusamus nam laboriosam nobis. Veritatis, quidem.</p>
+
+</div>
+<!--POSICIONAMIENTO-->
+
+<div class="contenedor">
+    <div class="caja2 red"></div>
+    <div class="caja2 blue"></div>
+    <div class="caja2 black"></div>
+</div>
+
+
+</body>
+</html>
