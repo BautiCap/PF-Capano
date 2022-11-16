@@ -7,14 +7,22 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-body{
-    position: relative;
+.bodyindex{
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(185,73,43,1) 100%)
-    ;padding-bottom: 90px;
+    ;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    grid-template-areas: "nav"
+                         "main"
+                         "footer";
+
 
 }
- 
+ header{
+    grid-area: nav;
+ }
 .interior{
     width: 100%;
     background-color:rgb(238, 189, 157);
@@ -76,46 +84,71 @@ body{
     position: absolute;
     width: 100%;
     overflow: hidden;
+
 }
 .navegacion .submenu .hijos li{
     display: block;
     border-bottom: none;
 
+
 }
 .navegacion .submenu .hijos li a{
     display: block;
+
 }
 /*Main*/
+.mainindex{
+    grid-area: main;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-areas: "img1 "
+                         "img2 ";
+
+
+}
 .imgprincipal{
-    background-image: url(../img/imagen.jpg);
-    ;
-    height: 500px;
-    background-size: contain;
-    margin: 30px;
+    grid-area: img1;
+    height: 600px;
+    width: 90%;
+    margin: 30px auto;
     border-radius: 20px;
-    background-attachment: fixed;
     border: 1px solid rgb(65, 62, 62);
-    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
     
+}
+.imgprincipal img{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    margin: 0 auto;
     
+
 
 }
 main .imgsecundarias{
-    display:flex;
+    grid-area: img2;
     justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "simg1 simg2 simg3";
+    margin-bottom: 30px;
     
     
     
 
 }
 main .imgsecundarias .imagen1{
+    grid-area: simg1;
     
     width: 300px;
     height: 300px;
     background-size: contain;
     border-radius: 20px;
     border: 1px solid rgb(65, 62, 62);
-    margin:0 40px; 
+    margin:auto; 
     background-image: url(../img/imagen\ secundaria\ 1.jpg);
     transition: all 1s;
 }
@@ -135,13 +168,14 @@ main .imgsecundarias .imagen1:hover {
 }
 
 main .imgsecundarias .imagen2{
+    grid-area: simg2;
     background-image: url(../img/imagen\ secundaria\ 2.jpg);
     height: 300px ;
     width: 300px;
     background-size: contain;
     border-radius: 20px;
     border: 1px solid rgb(65, 62, 62);
-    margin:0 40px;
+    margin:0 auto;
     transition: all 1s;
 }
 main .imgsecundarias .imagen2 h1{
@@ -158,14 +192,15 @@ main .imgsecundarias .imagen2:hover{
         transition: .4s linear;}
 
 main .imgsecundarias .imagen3{
+        grid-area: simg3;
         background-image: url(../img/imagen\ secundaria\ 3.jpg);
         height: 300px;
         width: 300px;
         background-size: contain;
-    border-radius: 20px;
-    border: 1px solid rgb(65, 62, 62);
-    margin:0 40px; 
-    transition: all 1s;
+        border-radius: 20px;
+        border: 1px solid rgb(65, 62, 62);
+        margin:0 auto; 
+        transition: all 1s;
 }
 main .imgsecundarias .imagen3 h1{
             text-align: center;
@@ -182,15 +217,13 @@ main .imgsecundarias .imagen3:hover{
         text-decoration: none;
         overflow: hidden;}
 /*footer*/
-
-footer{
- position: absolute;
- bottom: 0;
- width: 100%;
+.footerindex{
+    width: 100%;
+    grid-area: footer;
+    overflow: hidden;
 }
 
 footer .pie{
-
     width: 100%;
     height: 60px;
     background-color:rgb(238, 189, 157);

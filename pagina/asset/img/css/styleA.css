@@ -29,7 +29,8 @@ transition:el tiempo en que reacciona el moviemiento.
     transition: 1s;
     padding: 20px;
 }
-.contenedorImg img:nth-child(1):hover{transform: translate(200px,200px);
+.contenedorImg img:nth-child(1):hover{
+    transform: translate(200px,200px);
     transition: 2s;
 }
 .contenedorImg img:nth-child(2):hover{
