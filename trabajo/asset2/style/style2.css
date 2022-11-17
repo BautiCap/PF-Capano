@@ -33,6 +33,7 @@
     float:left;
     padding: 5px 10x;
     height: 120px;
+    display: none;
 
 }
 .logo img{
@@ -40,6 +41,19 @@
     transition: 0.5s;
 }
 .logo img:hover{
+    transform: scale(1.1);
+}
+.logo2{
+    float:left;
+    padding: 5px 10x;
+    height: 120px;
+
+}
+.logo2 img{
+    height: 120px;
+    transition: 0.5s;
+}
+.logo2 img:hover{
     transform: scale(1.1);
 }
 .navegacion{
@@ -50,6 +64,13 @@
     align-items: center;
     
     
+}
+.interior .fa-solid{
+    color: white;
+    font-size: 30px;
+    display: none;
+    
+
 }
 .navegacion ul li{
     display: inline-block;
@@ -216,6 +237,56 @@ main .imgsecundarias .imagen3:hover{
         transition: .4s linear;
         text-decoration: none;
         overflow: hidden;}
+/*footer*/
+footer .pie{
+            grid-area: footer;
+            width: 100%;
+            background-color:rgb(238, 189, 157);
+            border-top: 1px solid rgb(65, 68, 66);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "f1 f2";
+        }
+footer .pie .redes{
+            grid-area: f2;
+            display: flex;
+            margin: auto;
+            height: 100%;
+            }
+footer .pie .redes a,.tituloderedes{
+            color: white;
+            font-size:25px;
+            font-weight: 600;
+            padding: 0 10px;   
+            margin:auto;    
+        }
+        footer .pie .redes a:hover{
+            transform:scale(1.1);
+            color: rgb(160, 148, 131);
+            transition: 0.5s;
+        }
+        footer .pie .contacto2{
+            grid-area: f1;
+            display: flex;
+            margin: auto;
+            height: 100%;
+        
+        }
+        footer .pie .contacto2 i{
+            color: white;
+            font-size:25px;
+            font-weight: 600;
+            padding: 0 10px;   
+            margin:auto
+        }
+        .titulodecontactos{
+            color: white;
+            font-size:25px;
+            font-weight: 600;
+            padding: 0 10px;   
+            margin:auto;
+        
+        }
 
 @media(max-width:910px){
     .mainindex .imgsecundarias{
@@ -235,7 +306,7 @@ main .imgsecundarias .imagen3:hover{
         background-size: contain;
         border-radius: 20px;
         border: 1px solid rgb(65, 62, 62);
-        margin:auto; 
+        margin:15px auto; 
         background-image: url(../img/imagen\ secundaria\ 1.jpg);
         transition: all 1s;}
     .mainindex .imgsecundarias .imagen2{
@@ -246,7 +317,7 @@ main .imgsecundarias .imagen3:hover{
         background-size: contain;
             border-radius: 20px;
             border: 1px solid rgb(65, 62, 62);
-            margin:0 auto;
+            margin:15px auto;
             transition: all 1s;}
     .mainindex .imgsecundarias .imagen3{
             grid-area: simg3;
@@ -259,68 +330,127 @@ main .imgsecundarias .imagen3:hover{
             margin:0 auto; 
             transition: all 1s;
         }
+
 }
 @media(max-width:700px){
+    .mainindex .imgsecundarias{
+        grid-area: img2;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "simg1" 
+                            "simg2" 
+                            "simg3"
+                                    ;
+        margin-bottom: 30px;
+    }
+    .mainindex .imgsecundarias .imagen1{
+        grid-area: simg1;
+        width: 300px;
+        height: 300px;
+        background-size: contain;
+        border-radius: 20px;
+        border: 1px solid rgb(65, 62, 62);
+        margin:15px auto; 
+        background-image: url(../img/imagen\ secundaria\ 1.jpg);
+        transition: all 1s;}
+    .mainindex .imgsecundarias .imagen2{
+        grid-area: simg2;
+        background-image: url(../img/imagen\ secundaria\ 2.jpg);
+        height: 300px ;
+         width: 300px;
+        background-size: contain;
+            border-radius: 20px;
+            border: 1px solid rgb(65, 62, 62);
+            margin:15px auto;
+            transition: all 1s;}
+    .mainindex .imgsecundarias .imagen3{
+            grid-area: simg3;
+            background-image: url(../img/imagen\ secundaria\ 3.jpg);
+            height: 300px;
+            width: 300px;
+            background-size: contain;
+            border-radius: 20px;
+            border: 1px solid rgb(65, 62, 62);
+            margin:15px auto; 
+            transition: all 1s;
+        }    
+    .interior .navegacion ul{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color:rgb(238, 189, 157);
+        width: 250px;
+        height: 100vh;
+        left:-250px;
+        transition: 0.2s;
+        border-right: 1px solid rgba(0, 0, 0, 0.301);
+    }  
+    .interior .navegacion ul .logo{
+        margin: 0 auto;
+    }
 
-
-
-
-
+    .interior .navegacion ul li{
+        margin: 50px auto;
+    }
     
-}  
-/*footer*/
-.footerindex{
-    width: 100%;
-    grid-area: footer;
-    overflow: hidden;
-}
+    .interior .fa-solid{
+        display:flex;
+        padding: 10px;
+    }
+    .interior .navegacion .fa-solid:hover + ul {
+        left:0;
+        transition: 0.5s;
 
-footer .pie{
-    width: 100%;
-    height: 60px;
-    background-color:rgb(238, 189, 157);
-    border-top: 1px solid rgb(65, 68, 66);
-    ;
-}
-footer .pie .redes{
-    display: flex;
-    float: right;
-}
-footer .pie .redes a,.tituloderedes{
-    color: white;
-    float: right;
-    font-size: 40px;
-    padding: 0 10px;
+    }
+    .interior .navegacion ul:hover{
+        left:0
+    }
+    .logo{
+        display:flex;
+    }
+    .interior{
+        display: flex;
+    }
+    .logo2{
+        margin: auto;
+    }  
+    .interior{
+        position: fixed;
+    }
+    footer .pie{
+        grid-area: footer;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "f2 f2"
+                             "f1 f1";
+    }
+    footer .pie .redes{
+        grid-area:f2;
+        display: flex;
+        margin: auto;
+        height: 100%;
+    }
+    footer .pie .contacto2{
+        grid-area:f1;
+        display: flex;
+        margin: auto;
+        height: 100%;
+   
     
+   
+    }
 }
-.tituloderedes{
-    font-size: 25px;   
-    height: auto;
-    margin-top: 10px;
-}
-footer .pie .redes a:hover{
-    transform:scale(1.1);
-    color: rgb(160, 148, 131);
-    transition: 0.5s;
-}
-footer .pie .contacto2{
-    display: flex;
-    float: left;
 
-}
-footer .pie .contacto2 i{
-    color: white;
-    font-size: 30px;
-    padding: 0 10px;
-    margin-top: 15px;
 
-}
-.titulodecontactos{
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 10px;
-}
+
+
+
+
+
 /*CONTACTO*/
 
 main .formulario5{
@@ -331,8 +461,8 @@ main .formulario5{
     color: white;
     padding: 20px;
     display: grid;
-    -webkit-box-shadow: 0px 0px 10px 3px #000000; 
-box-shadow: 0px 0px 20px 3px #000000;
+    -webkit-box-shadow: 0px 0px 10px 3px #00000094; 
+box-shadow: 0px 0px 20px 3px #0000007a;
     border-radius: 10px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -380,10 +510,6 @@ box-shadow: 0px 0px 20px 3px #000000;
 .formulario5 input:nth-child(7){
     grid-area: zona7;
     background-color:rgb(160, 148, 131);
-    
     border: none;
     padding: 20px;
-    border-radius: 5px;
-
-}
-
+    border-radius: 5px;}
