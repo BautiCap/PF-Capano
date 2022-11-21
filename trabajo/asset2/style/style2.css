@@ -8,9 +8,7 @@
 }
 
 .bodyindex{
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(185,73,43,1) 100%)
-    ;
+    background-color:rgb(238, 189, 157);
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows:auto auto auto;
@@ -26,7 +24,7 @@
 .interior{
     width: 100%;
     background-color:rgb(238, 189, 157);
-    border-bottom: 1px solid rgb(65, 68, 66);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.171)
     ;height: 120px;
 }
 .logo{
@@ -59,23 +57,21 @@
 .navegacion{
     float: right;
     display: flex;
-    height: 120px;
-    justify-items: center;
-    align-items: center;
-    
-    
+    height: 120px;   
 }
 .interior .fa-solid{
     color: white;
     font-size: 30px;
     display: none;
-    
 
+}
+.navegacion ul{
+    margin: auto;
+    justify-items: center;
 }
 .navegacion ul li{
     display: inline-block;
     transition: 0.5s;
-    z-index: 1000;
 }
 .navegacion ul li:hover{
     transform: scale(1.1);
@@ -88,6 +84,7 @@
     font-size:25px;
     padding: 12px 20px;
     font-weight: 600;
+    text-decoration: none;
     
 }
 .navegacion ul li a:hover{
@@ -95,29 +92,33 @@
     transition: 0.5s;
 
 }
+.navegacion .submenu .hijos{
+    display:none;
+    background:rgb(160, 148, 131);
+    position: absolute;
+    overflow: hidden;
+    width: auto;
+    padding: 0%;
+
+}
 .navegacion ul li:hover .hijos{
     display:block;
     
-}
-.navegacion .submenu .hijos{
-    display: none;
-    background:rgb(160, 148, 131);
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-
+    
+    
 }
 .navegacion .submenu .hijos li{
-    display: block;
-    border-bottom: none;
-
-
+    margin: auto;
+    
+   
 }
+
 .navegacion .submenu .hijos li a{
     display: block;
-
+ 
 }
 /*Main*/
+
 .mainindex{
     grid-area: main;
     display: grid;
@@ -127,122 +128,119 @@
 
 
 }
-.imgprincipal{
-    grid-area: img1;
-    height: 600px;
+.carrusel{
     width: 90%;
-    margin: 30px auto;
-    border-radius: 20px;
-    border: 1px solid rgb(65, 62, 62);
-    display: flex;
-    flex-direction: column;
-    
+    grid-area: img1;
+    margin: auto;
 }
-.imgprincipal img{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    border-radius: 20px;
-    margin: 0 auto;
-    
-
-
+#carouselExampleIndicators{
+    z-index: -10;
 }
 main .imgsecundarias{
     grid-area: img2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "simg1 simg2 simg3";
-    margin-bottom: 30px;
-    flex-wrap:wrap;
-    
-    
-    
-
+    margin:30px auto;
 }
-main .imgsecundarias .imagen1{
-    grid-area: simg1;
-    
-    width: 300px;
+.imagen1{
+    grid-area: simg1; 
     height: 300px;
-    background-size: contain;
-    border-radius: 20px;
-    border: 1px solid rgb(65, 62, 62);
-    margin:auto; 
-    background-image: url(../img/imagen\ secundaria\ 1.jpg);
-    transition: all 1s;
+    width: 300px;
+    position: relative;
+    overflow: hidden;    
+    margin: 0 10px;
 }
-
-main .imgsecundarias .imagen1 h1{
-    text-align:center;
-    color: white;
+.imagen1 a img{
     height: 100%;
     width: 100%;
-    padding-top: 120px; 
-
+    transition: 0.5s;
 }
-main .imgsecundarias .imagen1:hover {
+main .imgsecundarias .imagen1 h1{
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.imagen1 a img:hover {
     transform: scale(1.1);
-    transition: .4s linear;
-
+    transition: 1s;
+    opacity: .7;
+    
 }
-
-main .imgsecundarias .imagen2{
-    grid-area: simg2;
-    background-image: url(../img/imagen\ secundaria\ 2.jpg);
-    height: 300px ;
+.imagen2{
+    grid-area: simg2; 
+    height: 300px;
     width: 300px;
-    background-size: contain;
-    border-radius: 20px;
-    border: 1px solid rgb(65, 62, 62);
-    margin:0 auto;
-    transition: all 1s;
+    position: relative;
+    overflow: hidden;    
+    margin: 0 10px;
+}
+.imagen2 a img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
 }
 main .imgsecundarias .imagen2 h1{
-        text-align: center;
-        color: white;
-        height: 100%;
-        width: 100%;
-        padding-top: 120px;
-
-    }
-main .imgsecundarias .imagen2:hover{
-
-        transform: scale(1.1);
-        transition: .4s linear;}
-
-main .imgsecundarias .imagen3{
-        grid-area: simg3;
-        background-image: url(../img/imagen\ secundaria\ 3.jpg);
-        height: 300px;
-        width: 300px;
-        background-size: contain;
-        border-radius: 20px;
-        border: 1px solid rgb(65, 62, 62);
-        margin:0 auto; 
-        transition: all 1s;
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.imagen2 a img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    opacity: .7;
+}
+.imagen3{
+    grid-area: simg3; 
+    height: 300px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;    
+    margin: 0 10px;
+}
+.imagen3 a img{
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
 }
 main .imgsecundarias .imagen3 h1{
-            text-align: center;
-            color: rgb(255, 255, 255);
-            height: 100%;
-            width: 100%;
-            padding-top: 120px;
+    font-size: 3rem;
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.imagen3 a img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+    opacity: .7;
+}
+.imagen4{
+        height: 300px;
+        width: 300px;
+        position: relative;
+        overflow: hidden;
+        
         }
-
-main .imgsecundarias .imagen3:hover{
-        display: block;
-        transform: scale(1.1);
-        transition: .4s linear;
-        text-decoration: none;
-        overflow: hidden;}
 /*footer*/
 footer .pie{
             grid-area: footer;
             width: 100%;
             background-color:rgb(238, 189, 157);
-            border-top: 1px solid rgb(65, 68, 66);
+            border-top: 1px solid rgba(0, 0, 0, 0.171);
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: "f1 f2";
@@ -298,15 +296,14 @@ footer .pie .redes a,.tituloderedes{
                             "simg3 simg3" 
                                     ;
         margin-bottom: 30px;
+        gap: 15px;
     }
     .mainindex .imgsecundarias .imagen1{
         grid-area: simg1;
         width: 300px;
         height: 300px;
         background-size: contain;
-        border-radius: 20px;
-        border: 1px solid rgb(65, 62, 62);
-        margin:15px auto; 
+        margin:auto; 
         background-image: url(../img/imagen\ secundaria\ 1.jpg);
         transition: all 1s;}
     .mainindex .imgsecundarias .imagen2{
@@ -315,9 +312,7 @@ footer .pie .redes a,.tituloderedes{
         height: 300px ;
          width: 300px;
         background-size: contain;
-            border-radius: 20px;
-            border: 1px solid rgb(65, 62, 62);
-            margin:15px auto;
+        margin: auto;
             transition: all 1s;}
     .mainindex .imgsecundarias .imagen3{
             grid-area: simg3;
@@ -325,9 +320,7 @@ footer .pie .redes a,.tituloderedes{
             height: 300px;
             width: 300px;
             background-size: contain;
-            border-radius: 20px;
-            border: 1px solid rgb(65, 62, 62);
-            margin:0 auto; 
+            margin: auto; 
             transition: all 1s;
         }
 
@@ -346,47 +339,42 @@ footer .pie .redes a,.tituloderedes{
     }
     .mainindex .imgsecundarias .imagen1{
         grid-area: simg1;
-        width: 300px;
-        height: 300px;
-        background-size: contain;
-        border-radius: 20px;
-        border: 1px solid rgb(65, 62, 62);
-        margin:15px auto; 
-        background-image: url(../img/imagen\ secundaria\ 1.jpg);
-        transition: all 1s;}
+        width: 350px;
+        height: 350px;
+    }
     .mainindex .imgsecundarias .imagen2{
         grid-area: simg2;
-        background-image: url(../img/imagen\ secundaria\ 2.jpg);
-        height: 300px ;
-         width: 300px;
-        background-size: contain;
-            border-radius: 20px;
-            border: 1px solid rgb(65, 62, 62);
-            margin:15px auto;
-            transition: all 1s;}
+        width: 350px;
+        height: 350px;
+    }   
     .mainindex .imgsecundarias .imagen3{
-            grid-area: simg3;
-            background-image: url(../img/imagen\ secundaria\ 3.jpg);
-            height: 300px;
-            width: 300px;
-            background-size: contain;
-            border-radius: 20px;
-            border: 1px solid rgb(65, 62, 62);
-            margin:15px auto; 
-            transition: all 1s;
-        }    
+        grid-area: simg3;
+        width: 350px;
+        height: 350px;     
+    }
+    header{
+        z-index: 2;
+    }
+    .carrusel{
+        z-index: 1;
+    }
+    
+
+    
+
     .interior .navegacion ul{
         display: flex;
         flex-direction: column;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -250px;
         background-color:rgb(238, 189, 157);
         width: 250px;
         height: 100vh;
-        left:-250px;
         transition: 0.2s;
-        border-right: 1px solid rgba(0, 0, 0, 0.301);
+        border:1px solid rgba(0, 0, 0, 0.301);
+        padding: 0%;
+        margin: auto;
     }  
     .interior .navegacion ul .logo{
         margin: 0 auto;
@@ -399,26 +387,28 @@ footer .pie .redes a,.tituloderedes{
     .interior .fa-solid{
         display:flex;
         padding: 10px;
-    }
-    .interior .navegacion .fa-solid:hover + ul {
-        left:0;
-        transition: 0.5s;
+        margin: auto;
 
     }
+    .interior .navegacion .fa-solid:hover + ul{
+        left:0;
+        transition: 0.5s;
+    }
     .interior .navegacion ul:hover{
-        left:0
+        left:0;  
     }
     .logo{
         display:flex;
     }
     .interior{
         display: flex;
+        position: fixed;
     }
     .logo2{
         margin: auto;
     }  
-    .interior{
-        position: fixed;
+    .carrusel{
+        margin-top:120px;
     }
     footer .pie{
         grid-area: footer;
