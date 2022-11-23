@@ -115,7 +115,7 @@
 }
 /*Main*/
 
-.mainindex{
+.mainindex{ 
     grid-area: main;
     display: grid;
     grid-template-rows: auto auto auto;
@@ -652,7 +652,7 @@ footer .pie .redes a,.tituloderedes{
     height: 100vh;
 }
 .mainform .formulario5{
-    background-color:rgb(238, 189, 157);
+    background-color:rgba(255, 158, 174, 0.541);
     margin:100px auto;
     width: 80%;
    height: auto;
