@@ -99,13 +99,9 @@
     overflow: hidden;
     width: auto;
     padding: 0%;
-
 }
 .navegacion ul li:hover .hijos{
-    display:block;
-    
-    
-    
+    display:block;  
 }
 .navegacion .submenu .hijos li{
     margin: auto;
@@ -122,9 +118,11 @@
 .mainindex{
     grid-area: main;
     display: grid;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: "img1 "
-                         "img2 ";
+                         "img2"
+                         "img3"
+                         "img4";
 
 
 }
@@ -132,9 +130,6 @@
     width: 90%;
     grid-area: img1;
     margin: auto;
-}
-#carouselExampleIndicators{
-    z-index: -10;
 }
 main .imgsecundarias{
     grid-area: img2;
@@ -235,6 +230,365 @@ main .imgsecundarias .imagen3 h1{
         overflow: hidden;
         
         }
+.barrasep{
+    grid-area: img3;
+    width: 60%;
+    margin: auto;
+}
+.barrasep h2{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: rgba(255, 158, 174, 0.541);
+    text-align: center;
+    padding: 10px;
+}
+.contenedor{
+    margin: 30px 0;
+    grid-area: img4;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    grid-template-areas: "ca1 ca2 ca3 ca4 ca5"
+                                             
+                         ;
+
+}
+.contenedor .card{
+    grid-area: ca1;
+    padding: 5px;
+    height: auto;
+    width: 200px;
+    margin: 15px 0;
+    box-shadow: 5px 5px 20px black;
+    background:rgba(255, 158, 174, 0.541) ;
+    color: white;
+    overflow: hidden;
+}
+.contenedor .card img{
+    border-radius: 6px;
+}
+.contenedor .card .card1 h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin: auto;
+}
+.contenedor .card i{
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    margin:5px auto;
+    color:rgb(160, 148, 131);
+}
+.contenedor .card .card1{
+    background-color:rgb(160, 148, 131);
+    position: absolute;
+    width:100%;
+    bottom:-95px;
+    border-radius: 6px;
+    left:0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+}
+.card1 button {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 5px;
+    background:rgb(160, 148, 131) ;
+    transition:0.5s;
+}
+
+.card1 button a{
+    text-decoration: none;
+    color: white;
+}
+.contenedor .card:hover .card1{
+    bottom: 0px;
+    transition: 1s;
+}
+.contenedor .card .card1 button:hover{
+    background:rgb(112, 104, 92);
+    transition: 1s;
+}
+.contenedor .card2{
+    grid-area: ca2;
+    padding: 5px;
+    height: auto;
+    width: 200px;
+    margin: 15px 0;
+    box-shadow: 5px 5px 20px black;
+    background:rgba(255, 158, 174, 0.541) ;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor .card2 img{
+    border-radius:6px;
+    width: 100%;
+}
+.contenedor .card2 .card12 h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin: auto;
+}
+.contenedor .card2 i{
+    text-align: center;
+    font-size: 30px;
+    margin:5px auto;
+    color:rgb(160, 148, 131);
+}
+.contenedor .card2 .card12{
+    background-color:rgb(160, 148, 131);
+    position: absolute;
+    width:100%;
+    bottom:-95px;
+    border-radius: 6px;
+    left:0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+}
+.card12 button {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 5px;
+    background:rgb(160, 148, 131) ;
+    transition:0.5s;
+}
+
+.card12 button a{
+    text-decoration: none;
+    color: white;
+}
+.contenedor .card2:hover .card12{
+    bottom: 0px;
+    transition: 1s;
+}
+.contenedor .card2 .card12 button:hover{
+    background:rgb(112, 104, 92);
+    transition: 1s;
+
+
+}
+.contenedor .card3{
+    grid-area: ca3;
+    padding: 5px;
+    height: auto;
+    width: 200px;
+    margin: 15px 0;
+    box-shadow: 5px 5px 20px black;
+    background:rgba(255, 158, 174, 0.541) ;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor .card3 img{
+    border-radius:6px;
+    width: 100%;
+}
+.contenedor .card3 .card13 h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin: auto;
+}
+.contenedor .card3 i{
+    text-align: center;
+    font-size: 30px;
+    margin:5px auto;
+    color:rgb(160, 148, 131);
+}
+.contenedor .card3 .card13{
+    background-color:rgb(160, 148, 131);
+    position: absolute;
+    width:100%;
+    bottom:-95px;
+    border-radius: 6px;
+    left:0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+}
+.card13 button {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 5px;
+    background:rgb(160, 148, 131) ;
+    transition:0.5s;
+}
+
+.card13 button a{
+    text-decoration: none;
+    color: white;
+}
+.contenedor .card3:hover .card13{
+    bottom: 0px;
+    transition: 1s;
+}
+.contenedor .card3 .card13 button:hover{
+    background:rgb(112, 104, 92);
+    transition: 1s;
+
+
+}
+.contenedor .card4{
+    grid-area: ca4;
+    padding: 5px;
+    height: auto;
+    margin: 15px 0;
+    width: 200px;
+    box-shadow: 5px 5px 20px black;
+    background:rgba(255, 158, 174, 0.541) ;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor .card4 img{
+    border-radius:6px;
+    width: 100%;
+}
+.contenedor .card4 .card14 h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin: auto;
+}
+.contenedor .card4 i{
+    text-align: center;
+    font-size: 30px;
+    margin:5px auto;
+    color:rgb(160, 148, 131);
+}
+.contenedor .card4 .card14{
+    background-color:rgb(160, 148, 131);
+    position: absolute;
+    width:100%;
+    bottom:-95px;
+    border-radius: 6px;
+    left:0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+}
+.card14 button {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 5px;
+    background:rgb(160, 148, 131) ;
+    transition:0.5s;
+}
+
+.card14 button a{
+    text-decoration: none;
+    color: white;
+}
+.contenedor .card4:hover .card14{
+    bottom: 0px;
+    transition: 1s;
+}
+.contenedor .card4 .card14 button:hover{
+    background:rgb(112, 104, 92);
+    transition: 1s;
+
+
+}
+.contenedor .card5{
+    grid-area: ca5;
+    padding: 5px;
+    height: auto;
+    width: 200px;
+    margin: 15px 0;
+    box-shadow: 5px 5px 20px black;
+    background:rgba(255, 158, 174, 0.541) ;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor .card5 img{
+    border-radius:6px;
+    width: 100%;
+}
+.contenedor .card5 .card15 h4{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    margin: auto;
+}
+.contenedor .card5 i{
+    text-align: center;
+    font-size: 30px;
+    margin:5px auto;
+    color:rgb(160, 148, 131);
+}
+.contenedor .card5 .card15{
+    background-color:rgb(160, 148, 131);
+    position: absolute;
+    width:100%;
+    bottom:-95px;
+    border-radius: 6px;
+    left:0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    text-align: center;
+}
+.card15 button {
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 6px;
+    padding: 5px;
+    background:rgb(160, 148, 131) ;
+    transition:0.5s;
+}
+
+.card15 button a{
+    text-decoration: none;
+    color: white;
+}
+.contenedor .card5:hover .card15{
+    bottom: 0px;
+    transition: 1s;
+}
+.contenedor .card5 .card15 button:hover{
+    background:rgb(112, 104, 92);
+    transition: 1s;
+
+
+}
+
+
+
+
+
 /*footer*/
 footer .pie{
             grid-area: footer;
@@ -285,6 +639,17 @@ footer .pie .redes a,.tituloderedes{
             margin:auto;
         
         }
+@media(max-width:1000px){
+    .contenedor{
+        grid-area: img4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-items: center;
+
+}
+
+}
 
 @media(max-width:910px){
     .mainindex .imgsecundarias{
@@ -323,9 +688,11 @@ footer .pie .redes a,.tituloderedes{
             margin: auto; 
             transition: all 1s;
         }
+        
 
 }
 @media(max-width:700px){
+    
     .mainindex .imgsecundarias{
         grid-area: img2;
         display: grid;
