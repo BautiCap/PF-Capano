@@ -99,18 +99,18 @@
     overflow: hidden;
     width: auto;
     padding: 0%;
+
 }
 .navegacion ul li:hover .hijos{
-    display:block;  
+    display:block ;
 }
 .navegacion .submenu .hijos li{
     margin: auto;
-    
-   
+
 }
 
 .navegacion .submenu .hijos li a{
-    display: block;
+    display: block ;
  
 }
 /*Main*/
@@ -639,168 +639,7 @@ footer .pie .redes a,.tituloderedes{
             margin:auto;
         
         }
-@media(max-width:1000px){
-    .contenedor{
-        grid-area: img4;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        justify-items: center;
 
-}
-
-}
-
-@media(max-width:910px){
-    .mainindex .imgsecundarias{
-        grid-area: img2;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas: "simg1 simg2" 
-                            "simg3 simg3" 
-                                    ;
-        margin-bottom: 30px;
-        gap: 15px;
-    }
-    .mainindex .imgsecundarias .imagen1{
-        grid-area: simg1;
-        width: 300px;
-        height: 300px;
-        background-size: contain;
-        margin:auto; 
-        background-image: url(../img/imagen\ secundaria\ 1.jpg);
-        transition: all 1s;}
-    .mainindex .imgsecundarias .imagen2{
-        grid-area: simg2;
-        background-image: url(../img/imagen\ secundaria\ 2.jpg);
-        height: 300px ;
-         width: 300px;
-        background-size: contain;
-        margin: auto;
-            transition: all 1s;}
-    .mainindex .imgsecundarias .imagen3{
-            grid-area: simg3;
-            background-image: url(../img/imagen\ secundaria\ 3.jpg);
-            height: 300px;
-            width: 300px;
-            background-size: contain;
-            margin: auto; 
-            transition: all 1s;
-        }
-        
-
-}
-@media(max-width:700px){
-    
-    .mainindex .imgsecundarias{
-        grid-area: img2;
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas: "simg1" 
-                            "simg2" 
-                            "simg3"
-                                    ;
-        margin-bottom: 30px;
-    }
-    .mainindex .imgsecundarias .imagen1{
-        grid-area: simg1;
-        width: 350px;
-        height: 350px;
-    }
-    .mainindex .imgsecundarias .imagen2{
-        grid-area: simg2;
-        width: 350px;
-        height: 350px;
-    }   
-    .mainindex .imgsecundarias .imagen3{
-        grid-area: simg3;
-        width: 350px;
-        height: 350px;     
-    }
-    header{
-        z-index: 2;
-    }
-    .carrusel{
-        z-index: 1;
-    }
-    
-
-    
-
-    .interior .navegacion ul{
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        left: -250px;
-        background-color:rgb(238, 189, 157);
-        width: 250px;
-        height: 100vh;
-        transition: 0.2s;
-        border:1px solid rgba(0, 0, 0, 0.301);
-        padding: 0%;
-        margin: auto;
-    }  
-    .interior .navegacion ul .logo{
-        margin: 0 auto;
-    }
-
-    .interior .navegacion ul li{
-        margin: 50px auto;
-    }
-    
-    .interior .fa-solid{
-        display:flex;
-        padding: 10px;
-        margin: auto;
-
-    }
-    .interior .navegacion .fa-solid:hover + ul{
-        left:0;
-        transition: 0.5s;
-    }
-    .interior .navegacion ul:hover{
-        left:0;  
-    }
-    .logo{
-        display:flex;
-    }
-    .interior{
-        display: flex;
-        position: fixed;
-    }
-    .logo2{
-        margin: auto;
-    }  
-    .carrusel{
-        margin-top:120px;
-    }
-    footer .pie{
-        grid-area: footer;
-        display: grid;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "f2 f2"
-                             "f1 f1";
-    }
-    footer .pie .redes{
-        grid-area:f2;
-        display: flex;
-        margin: auto;
-        height: 100%;
-    }
-    footer .pie .contacto2{
-        grid-area:f1;
-        display: flex;
-        margin: auto;
-        height: 100%;
-   
-    
-   
-    }
-}
 
 
 
@@ -809,12 +648,14 @@ footer .pie .redes a,.tituloderedes{
 
 
 /*CONTACTO*/
-
-main .formulario5{
-
+.mainform{
+    height: 100vh;
+}
+.mainform .formulario5{
     background-color:rgb(238, 189, 157);
     margin:100px auto;
-    width: 800px;
+    width: 80%;
+   height: auto;
     color: white;
     padding: 20px;
     display: grid;
@@ -869,4 +710,196 @@ box-shadow: 0px 0px 20px 3px #0000007a;
     background-color:rgb(160, 148, 131);
     border: none;
     padding: 20px;
-    border-radius: 5px;}
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    transition: 0.5s;
+}
+.formulario5 input:nth-child(7):hover{
+    background-color:rgb(121, 111, 99);
+    transition: 1s;
+    cursor:pointer;
+}
+@media(max-width:1000px){
+        .contenedor{
+            grid-area: img4;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-items: center;
+    
+    }
+    
+    }
+    
+@media(max-width:910px){
+        .mainindex .imgsecundarias{
+            grid-area: img2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "simg1 simg2" 
+                                "simg3 simg3" 
+                                        ;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        .mainindex .imgsecundarias .imagen1{
+            grid-area: simg1;
+            width: 300px;
+            height: 300px;
+            background-size: contain;
+            margin:auto; 
+            background-image: url(../img/imagen\ secundaria\ 1.jpg);
+            transition: all 1s;}
+        .mainindex .imgsecundarias .imagen2{
+            grid-area: simg2;
+            background-image: url(../img/imagen\ secundaria\ 2.jpg);
+            height: 300px ;
+             width: 300px;
+            background-size: contain;
+            margin: auto;
+                transition: all 1s;}
+        .mainindex .imgsecundarias .imagen3{
+                grid-area: simg3;
+                background-image: url(../img/imagen\ secundaria\ 3.jpg);
+                height: 300px;
+                width: 300px;
+                background-size: contain;
+                margin: auto; 
+                transition: all 1s;
+            }
+            
+    
+    }
+    @media(max-width:720px){
+        
+        .mainindex .imgsecundarias{
+            grid-area: img2;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto auto auto;
+            grid-template-areas: "simg1" 
+                                "simg2" 
+                                "simg3"
+                                        ;
+            margin-bottom: 30px;
+        }
+        .mainindex .imgsecundarias .imagen1{
+            grid-area: simg1;
+            width: 350px;
+            height: 350px;
+        }
+        .mainindex .imgsecundarias .imagen2{
+            grid-area: simg2;
+            width: 350px;
+            height: 350px;
+        }   
+        .mainindex .imgsecundarias .imagen3{
+            grid-area: simg3;
+            width: 350px;
+            height: 350px;     
+        }
+        header{
+            z-index: 2;
+        }
+        .carrusel{
+            z-index: 1;
+        }
+        
+    
+        
+    
+        .interior .navegacion ul{
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color:rgb(238, 189, 157);
+            width: 250px;
+            height: 100vh;
+            transition: 0.2s;
+            border:1px solid rgba(0, 0, 0, 0.301);
+            padding: 0%;
+            margin: auto;
+        }  
+        .interior .navegacion ul .logo{
+            margin: 0 auto;
+        }
+    
+        .interior .navegacion ul li{
+            margin: 50px auto;
+        }
+        
+        .interior .fa-solid{
+            display:flex;
+            padding: 10px;
+            margin: auto;
+    
+        }
+        .interior .navegacion .fa-solid:hover + ul{
+            left:0;
+            transition: 0.5s;
+        }
+        .interior .navegacion ul:hover{
+            left:0;  
+        }
+        .logo{
+            display:flex;
+        }
+        .interior{
+            display: flex;
+            position: fixed;
+        }
+        .logo2{
+            margin: auto;
+        }  
+        .carrusel{
+            margin-top:120px;
+        }
+        footer .pie{
+            grid-area: footer;
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "f2 f2"
+                                 "f1 f1";
+        }
+        footer .pie .redes{
+            grid-area:f2;
+            display: flex;
+            margin: auto;
+            height: 100%;
+        }
+        footer .pie .contacto2{
+            grid-area:f1;
+            display: flex;
+            margin: auto;
+            height: 100%;
+       
+        
+       
+        }
+        .mainform .formulario5{
+            margin-top: 150px;
+        }
+    }
+    @media(max-width:480px){
+        .mainform .formulario5{
+            grid-template-areas: "zona1 zona1"
+                                 "zona2 zona2"
+                                 "zona3 zona3"
+                                 "zona4 zona4"
+                                 "zona5 zona5"
+                                 "zona6 zona6"
+                                 "zona7 zona7"  ;
+        }
+
+
+
+
+   
+
+    }
