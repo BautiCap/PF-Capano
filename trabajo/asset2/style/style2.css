@@ -6,6 +6,13 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+body::-webkit-scrollbar{
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(160, 148, 131);
+    border-radius: 10px;
+}
 
 .bodyindex{
     background-color:rgb(238, 189, 157);
@@ -20,6 +27,7 @@
 }
  header{
     grid-area: nav;
+    z-index: 1;
  }
 .interior{
     width: 100%;
@@ -113,12 +121,13 @@
     display: block ;
  
 }
+
 /*Main*/
 
 .mainindex{ 
     grid-area: main;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: "img1 "
                          "img2"
                          "img3"
