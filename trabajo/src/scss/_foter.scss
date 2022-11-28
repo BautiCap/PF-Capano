@@ -1,0 +1,58 @@
+footer{
+    grid-area:footer;
+    .pie{
+        @media(max-width:720px){
+            grid-area: footer;
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "f2 f2"
+                                 "f1 f1";
+        }
+        width: 100%;
+        background-color:rgb(238, 189, 157);
+        border-top: 1px solid rgba(0, 0, 0, 0.171);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "f1 f2";
+        .redes{
+            grid-area: f2;
+            display: flex;
+            margin: auto;
+            height: 100%;
+            a,.tituloderedes{
+                color: white;
+                font-size:25px;
+                font-weight: 600;
+                padding: 0 10px;   
+                margin:auto; 
+                &:hover{
+                    transform:scale(1.1);
+                    color: rgb(160, 148, 131);
+                    transition: 0.5s;
+                }   
+            }
+        }
+        .contacto2{
+            grid-area: f1;
+            display: flex;
+            margin: auto;
+            height: 100%;
+            .titulodecontactos{
+                color: white;
+                font-size:25px;
+                font-weight: 600;
+                padding: 0 10px;   
+                margin:auto;
+            
+            }
+            i{
+                color: white;
+                font-size:25px;
+                font-weight: 600;
+                padding: 0 10px;   
+                margin:auto
+            }
+        }
+    }
+}

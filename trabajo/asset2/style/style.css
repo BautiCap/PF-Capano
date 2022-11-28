@@ -1,0 +1,834 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(160, 148, 131);
+  border-radius: 10px;
+}
+
+.bodyindex {
+  z-index: -1;
+  background-color: rgb(238, 189, 157);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "nav" "main" "footer";
+}
+
+header {
+  z-index: 1000;
+}
+header .interior {
+  width: 100%;
+  background-color: rgb(238, 189, 157);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.171);
+  height: 120px;
+}
+@media (max-width: 720px) {
+  header .interior {
+    display: flex;
+    position: fixed;
+  }
+}
+header .interior .logo2 {
+  float: left;
+  padding: 5px 10x;
+  height: 120px;
+}
+@media (max-width: 720px) {
+  header .interior .logo2 {
+    margin: auto;
+  }
+}
+header .interior .logo2 img {
+  height: 120px;
+  transition: 0.5s;
+}
+header .interior .logo2 img:hover {
+  transform: scale(1.1);
+}
+header .interior .navegacion {
+  float: right;
+  display: flex;
+  height: 120px;
+}
+@media (max-width: 720px) {
+  header .interior .navegacion .fa-solid:hover + ul {
+    left: 0;
+    transition: 0.5s;
+  }
+}
+header .interior .navegacion .fa-solid {
+  color: white;
+  font-size: 30px;
+  display: none;
+}
+@media (max-width: 720px) {
+  header .interior .navegacion .fa-solid {
+    display: flex;
+    padding: 10px;
+    margin: auto;
+  }
+}
+header .interior .navegacion ul {
+  margin: auto;
+  justify-items: center;
+}
+@media (max-width: 720px) {
+  header .interior .navegacion ul {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: rgb(238, 189, 157);
+    width: 250px;
+    height: 100vh;
+    transition: 0.2s;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    padding: 0%;
+    margin: auto;
+  }
+  header .interior .navegacion ul:hover {
+    left: 0;
+  }
+}
+header .interior .navegacion ul .logo {
+  float: left;
+  padding: 5px 10x;
+  height: 120px;
+  display: none;
+}
+header .interior .navegacion ul .logo img {
+  height: 120px;
+  transition: 0.5s;
+}
+header .interior .navegacion ul .logo img:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 720px) {
+  header .interior .navegacion ul .logo {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+header .interior .navegacion ul li {
+  display: inline-block;
+  transition: 0.5s;
+}
+@media (max-width: 720px) {
+  header .interior .navegacion ul li {
+    margin: 50px auto;
+  }
+}
+header .interior .navegacion ul li:hover {
+  transform: scale(1.1);
+  background-color: rgb(160, 148, 131);
+  border-radius: 5px;
+}
+header .interior .navegacion ul li a {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 25px;
+  padding: 12px 20px;
+  font-weight: 600;
+  text-decoration: none;
+}
+header .interior .navegacion ul li a:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+header .interior .navegacion ul li:hover .hijos {
+  display: block;
+}
+header .interior .navegacion ul .hijos {
+  display: none;
+  background: rgb(160, 148, 131);
+  position: absolute;
+  overflow: hidden;
+  width: auto;
+  padding: 0%;
+}
+header .interior .navegacion ul .hijos li {
+  margin: auto;
+}
+header .interior .navegacion ul .hijos li a {
+  display: block;
+}
+
+.mainindex {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "img1 " "img2" "img3" "img4";
+}
+.mainindex .carrusel {
+  width: 90%;
+  grid-area: img1;
+  margin: auto;
+}
+@media (max-width: 720px) {
+  .mainindex .carrusel {
+    margin-top: 120px;
+  }
+}
+.mainindex .imgsecundarias {
+  grid-area: img2;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "simg1 simg2 simg3";
+  margin: 30px auto;
+}
+@media (max-width: 910px) {
+  .mainindex .imgsecundarias {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "simg1 simg2" "simg3 simg3";
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+}
+@media (max-width: 720px) {
+  .mainindex .imgsecundarias {
+    grid-area: img2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "simg1" "simg2" "simg3";
+    margin-bottom: 30px;
+  }
+}
+.mainindex .imgsecundarias .imagen1 {
+  grid-area: simg1;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+}
+@media (max-width: 910px) {
+  .mainindex .imgsecundarias .imagen1 {
+    grid-area: simg1;
+    margin: 0;
+  }
+}
+@media (max-width: 720px) {
+  .mainindex .imgsecundarias .imagen1 {
+    grid-area: simg1;
+    width: 350px;
+    height: 350px;
+  }
+}
+.mainindex .imgsecundarias .imagen1 a img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+  object-fit: cover;
+}
+.mainindex .imgsecundarias .imagen1 a img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  opacity: 0.7;
+}
+.mainindex .imgsecundarias .imagen1 h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainindex .imgsecundarias .imagen2 {
+  grid-area: simg2;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+}
+@media (max-width: 910px) {
+  .mainindex .imgsecundarias .imagen2 {
+    grid-area: simg2;
+    margin: 0;
+  }
+}
+@media (max-width: 720px) {
+  .mainindex .imgsecundarias .imagen2 {
+    grid-area: simg2;
+    width: 350px;
+    height: 350px;
+  }
+}
+.mainindex .imgsecundarias .imagen2 a img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.mainindex .imgsecundarias .imagen2 a img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  opacity: 0.7;
+}
+.mainindex .imgsecundarias .imagen2 h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainindex .imgsecundarias .imagen3 {
+  grid-area: simg3;
+  height: 300px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 10px;
+}
+@media (max-width: 910px) {
+  .mainindex .imgsecundarias .imagen3 {
+    grid-area: simg3;
+    margin: auto;
+  }
+}
+@media (max-width: 720px) {
+  .mainindex .imgsecundarias .imagen3 {
+    grid-area: simg3;
+    width: 350px;
+    height: 350px;
+  }
+}
+.mainindex .imgsecundarias .imagen3 a img {
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+.mainindex .imgsecundarias .imagen3 a img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  opacity: 0.7;
+}
+.mainindex .imgsecundarias .imagen3 h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mainindex .barrasep {
+  grid-area: img3;
+  width: 60%;
+  margin: auto;
+}
+.mainindex .barrasep h2 {
+  color: white;
+  font-size: clamp(10px, 5vw, 25px);
+  font-weight: 600;
+  background-color: rgba(255, 158, 174, 0.541);
+  text-align: center;
+  padding: 10px;
+}
+.mainindex .contenedor {
+  margin: 30px 0;
+  grid-area: img4;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ca1 ca2 ca3 ca4 ca5";
+}
+@media (max-width: 1000px) {
+  .mainindex .contenedor {
+    grid-area: img4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+.mainindex .contenedor .card {
+  grid-area: ca1;
+  padding: 5px;
+  height: auto;
+  width: 200px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 20px black;
+  background: rgba(255, 158, 174, 0.541);
+  color: white;
+  overflow: hidden;
+}
+.mainindex .contenedor .card:hover .card1 {
+  bottom: 0px;
+  transition: 1s;
+}
+.mainindex .contenedor .card img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+.mainindex .contenedor .card i {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  margin: 5px auto;
+  color: rgb(160, 148, 131);
+}
+.mainindex .contenedor .card .card1 {
+  background-color: rgb(160, 148, 131);
+  position: absolute;
+  width: 100%;
+  bottom: -95px;
+  border-radius: 6px;
+  left: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+}
+.mainindex .contenedor .card .card1 h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: auto;
+}
+.mainindex .contenedor .card .card1 button {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 5px;
+  background: rgb(160, 148, 131);
+  transition: 0.5s;
+}
+.mainindex .contenedor .card .card1 button:hover {
+  background: rgb(112, 104, 92);
+  transition: 1s;
+}
+.mainindex .contenedor .card .card1 button a {
+  text-decoration: none;
+  color: white;
+}
+.mainindex .contenedor .card2 {
+  grid-area: ca2;
+  padding: 5px;
+  height: auto;
+  width: 200px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 20px black;
+  background: rgba(255, 158, 174, 0.541);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.mainindex .contenedor .card2:hover .card12 {
+  bottom: 0px;
+  transition: 1s;
+}
+.mainindex .contenedor .card2 img {
+  border-radius: 6px;
+  width: 100%;
+}
+.mainindex .contenedor .card2 i {
+  text-align: center;
+  font-size: 30px;
+  margin: 5px auto;
+  color: rgb(160, 148, 131);
+}
+.mainindex .contenedor .card2 .card12 {
+  background-color: rgb(160, 148, 131);
+  position: absolute;
+  width: 100%;
+  bottom: -95px;
+  border-radius: 6px;
+  left: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+}
+.mainindex .contenedor .card2 .card12 h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: auto;
+}
+.mainindex .contenedor .card2 .card12 button {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 5px;
+  background: rgb(160, 148, 131);
+  transition: 0.5s;
+}
+.mainindex .contenedor .card2 .card12 button a {
+  text-decoration: none;
+  color: white;
+}
+.mainindex .card3 {
+  grid-area: ca3;
+  padding: 5px;
+  height: auto;
+  width: 200px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 20px black;
+  background: rgba(255, 158, 174, 0.541);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.mainindex .card3:hover .card13 {
+  bottom: 0px;
+  transition: 1s;
+}
+.mainindex .card3 img {
+  border-radius: 6px;
+  width: 100%;
+}
+.mainindex .card3 i {
+  text-align: center;
+  font-size: 30px;
+  margin: 5px auto;
+  color: rgb(160, 148, 131);
+}
+.mainindex .card3 .card13 {
+  background-color: rgb(160, 148, 131);
+  position: absolute;
+  width: 100%;
+  bottom: -95px;
+  border-radius: 6px;
+  left: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+}
+.mainindex .card3 .card13 h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: auto;
+}
+.mainindex .card3 .card13 button {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 5px;
+  background: rgb(160, 148, 131);
+  transition: 0.5s;
+}
+.mainindex .card3 .card13 button a {
+  text-decoration: none;
+  color: white;
+}
+.mainindex .card4 {
+  grid-area: ca4;
+  padding: 5px;
+  height: auto;
+  width: 200px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 20px black;
+  background: rgba(255, 158, 174, 0.541);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.mainindex .card4:hover .card14 {
+  bottom: 0px;
+  transition: 1s;
+}
+.mainindex .card4 img {
+  border-radius: 6px;
+  width: 100%;
+}
+.mainindex .card4 i {
+  text-align: center;
+  font-size: 30px;
+  margin: 5px auto;
+  color: rgb(160, 148, 131);
+}
+.mainindex .card4 .card14 {
+  background-color: rgb(160, 148, 131);
+  position: absolute;
+  width: 100%;
+  bottom: -95px;
+  border-radius: 6px;
+  left: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+}
+.mainindex .card4 .card14 h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: auto;
+}
+.mainindex .card4 .card14 button {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 5px;
+  background: rgb(160, 148, 131);
+  transition: 0.5s;
+}
+.mainindex .card4 .card14 button a {
+  text-decoration: none;
+  color: white;
+}
+.mainindex .card5 {
+  grid-area: ca5;
+  padding: 5px;
+  height: auto;
+  width: 200px;
+  margin: 15px 0;
+  box-shadow: 5px 5px 20px black;
+  background: rgba(255, 158, 174, 0.541);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.mainindex .card5:hover .card15 {
+  bottom: 0px;
+  transition: 1s;
+}
+.mainindex .card5 img {
+  border-radius: 6px;
+  width: 100%;
+}
+.mainindex .card5 i {
+  text-align: center;
+  font-size: 30px;
+  margin: 5px auto;
+  color: rgb(160, 148, 131);
+}
+.mainindex .card5 .card15 {
+  background-color: rgb(160, 148, 131);
+  position: absolute;
+  width: 100%;
+  bottom: -95px;
+  border-radius: 6px;
+  left: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  text-align: center;
+}
+.mainindex .card5 .card15 h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: auto;
+}
+.mainindex .card5 .card15 button {
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 5px;
+  background: rgb(160, 148, 131);
+  transition: 0.5s;
+}
+.mainindex .card5 .card15 button a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+}
+footer .pie {
+  width: 100%;
+  background-color: rgb(238, 189, 157);
+  border-top: 1px solid rgba(0, 0, 0, 0.171);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "f1 f2";
+}
+@media (max-width: 720px) {
+  footer .pie {
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "f2 f2" "f1 f1";
+  }
+}
+footer .pie .redes {
+  grid-area: f2;
+  display: flex;
+  margin: auto;
+  height: 100%;
+}
+footer .pie .redes a, footer .pie .redes .tituloderedes {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 0 10px;
+  margin: auto;
+}
+footer .pie .redes a:hover, footer .pie .redes .tituloderedes:hover {
+  transform: scale(1.1);
+  color: rgb(160, 148, 131);
+  transition: 0.5s;
+}
+footer .pie .contacto2 {
+  grid-area: f1;
+  display: flex;
+  margin: auto;
+  height: 100%;
+}
+footer .pie .contacto2 .titulodecontactos {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 0 10px;
+  margin: auto;
+}
+footer .pie .contacto2 i {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 0 10px;
+  margin: auto;
+}
+
+.mainform {
+  height: 100vh;
+}
+.mainform .formulario5 {
+  background-color: rgba(255, 158, 174, 0.541);
+  margin: 100px auto;
+  width: 80%;
+  height: auto;
+  color: white;
+  padding: 20px;
+  display: grid;
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5803921569);
+  box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.4784313725);
+  border-radius: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "zona1 zona1" "zona2 zona3" "zona4 zona5" "zona6 zona6" "zona7 zona7";
+}
+@media (max-width: 480px) {
+  .mainform .formulario5 {
+    grid-template-areas: "zona1 zona1" "zona2 zona2" "zona3 zona3" "zona4 zona4" "zona5 zona5" "zona6 zona6" "zona7 zona7";
+  }
+}
+.mainform .formulario5 label:nth-child(2) {
+  grid-area: zona2;
+}
+.mainform .formulario5 label:nth-child(3) {
+  grid-area: zona3;
+}
+.mainform .formulario5 label:nth-child(4) {
+  grid-area: zona4;
+}
+.mainform .formulario5 label:nth-child(5) {
+  grid-area: zona5;
+}
+.mainform .formulario5 label:nth-child(6) {
+  grid-area: zona6;
+}
+.mainform .formulario5 input:nth-child(7) {
+  grid-area: zona7;
+  background-color: rgb(160, 148, 131);
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  transition: 0.5s;
+}
+.mainform .formulario5 input:nth-child(7):hover {
+  background-color: rgb(121, 111, 99);
+  transition: 1s;
+  cursor: pointer;
+}
+.mainform .formulario5 h2 {
+  grid-area: zona1;
+  margin: auto;
+}
+.mainform .formulario5 label {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+.mainform .formulario5 label input, .mainform .formulario5 label textarea {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(160, 148, 131);
+  margin-top: 10px;
+}
+
+.formulario5 label .formulario5 .formulario5 label:nth-child(2) {
+  grid-area: zona2;
+}
+
+.formulario5 label:nth-child(3) {
+  grid-area: zona3;
+}
+
+.formulario5 label:nth-child(4) {
+  grid-area: zona4;
+}
+
+.formulario5 label:nth-child(5) {
+  grid-area: zona5;
+}
+
+.formulario5 label:nth-child(6) {
+  grid-area: zona6;
+}
+
+.formulario5 input:nth-child(7) {
+  grid-area: zona7;
+  background-color: rgb(160, 148, 131);
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  transition: 0.5s;
+}
+
+.formulario5 input:nth-child(7):hover {
+  background-color: rgb(121, 111, 99);
+  transition: 1s;
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+body::-webkit-scrollbar{
+    width: 7px;
+}
+body::-webkit-scrollbar-thumb{
+    background: rgb(160, 148, 131);
+    border-radius: 10px;
+}
+
+.bodyindex{
+    z-index: -1;
+    background-color:rgb(238, 189, 157);
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto auto auto;
+    grid-template-areas: "nav"
+                         "main"
+                         "footer";
+    
+}
+ 

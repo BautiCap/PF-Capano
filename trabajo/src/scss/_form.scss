@@ -1,0 +1,115 @@
+.mainform{
+    height: 100vh;
+    .formulario5{
+        @media(max-width:480px){
+            grid-template-areas: "zona1 zona1"
+                             "zona2 zona2"
+                             "zona3 zona3"
+                             "zona4 zona4"
+                             "zona5 zona5"
+                             "zona6 zona6"
+                             "zona7 zona7";
+        }
+        background-color:rgba(255, 158, 174, 0.541);
+        margin:100px auto;
+        width: 80%;
+        height: auto;
+        color: white;
+        padding: 20px;
+        display: grid;
+        -webkit-box-shadow: 0px 0px 10px 3px #00000094; 
+        box-shadow: 0px 0px 20px 3px #0000007a;
+        border-radius: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:"zona1 zona1" 
+                            "zona2 zona3"
+                            "zona4 zona5"
+                            "zona6 zona6"
+                            "zona7 zona7";
+        label:nth-child(2){
+            grid-area: zona2;
+        }
+        label:nth-child(3){
+            grid-area: zona3;
+        }
+        label:nth-child(4){
+            grid-area: zona4;
+        }
+        label:nth-child(5){
+            grid-area: zona5;
+        }
+        label:nth-child(6){
+            grid-area: zona6;
+        }
+        input:nth-child(7){
+            grid-area: zona7;
+            background-color:rgb(160, 148, 131);
+            border: none;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            color: white;
+            transition: 0.5s;
+        }
+        input:nth-child(7):hover{
+            background-color:rgb(121, 111, 99);
+            transition: 1s;
+            cursor:pointer;
+        }
+        h2{
+            grid-area: zona1;
+            margin: auto;
+        }
+        label{
+            display: flex;
+            flex-direction:column;
+            padding: 10px;
+            text-align: center;
+            input,textarea{
+                background-color: transparent;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid rgb(160, 148, 131);
+                margin-top: 10px;
+            
+            }
+        }   
+    }
+}
+
+.formulario5 label 
+
+.formulario5 
+.formulario5 label:nth-child(2){
+    grid-area: zona2;
+}
+.formulario5 label:nth-child(3){
+    grid-area: zona3;
+}
+.formulario5 label:nth-child(4){
+    grid-area: zona4;
+}
+.formulario5 label:nth-child(5){
+    grid-area: zona5;
+}
+.formulario5 label:nth-child(6){
+    grid-area: zona6;
+}
+.formulario5 input:nth-child(7){
+    grid-area: zona7;
+    background-color:rgb(160, 148, 131);
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    transition: 0.5s;
+}
+.formulario5 input:nth-child(7):hover{
+    background-color:rgb(121, 111, 99);
+    transition: 1s;
+    cursor:pointer;
+}
