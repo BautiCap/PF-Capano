@@ -1,5 +1,6 @@
 .mainform{
     height: 100vh;
+    background-color: rgb(216, 173, 144);
     .formulario5{
         @media(max-width:480px){
             grid-template-areas: "zona1 zona1"
@@ -27,41 +28,41 @@
                             "zona4 zona5"
                             "zona6 zona6"
                             "zona7 zona7";
-        label:nth-child(2){
-            grid-area: zona2;
-        }
-        label:nth-child(3){
-            grid-area: zona3;
-        }
-        label:nth-child(4){
-            grid-area: zona4;
-        }
-        label:nth-child(5){
-            grid-area: zona5;
-        }
-        label:nth-child(6){
-            grid-area: zona6;
-        }
-        input:nth-child(7){
-            grid-area: zona7;
-            background-color:rgb(160, 148, 131);
-            border: none;
-            padding: 20px;
-            border-radius: 5px;
-            font-size: 15px;
-            font-weight: 600;
-            color: white;
-            transition: 0.5s;
+
+
+        @for $var from 1 to 8 {
+            @if $var == 1{
+                h2:nth-child(1){
+                    grid-area: zona1;
+                    margin: auto;
+                }
+            }
+            @else if $var == 7{
+                input:nth-child(7){
+                    grid-area: zona7;
+                    background-color:rgb(160, 148, 131);
+                    border: none;
+                    padding: 20px;
+                    border-radius: 5px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: white;
+                    transition: 0.5s;
+                }
+            }
+            @else{
+                label:nth-child(#{$var}){
+                    grid-area: zona#{$var};
+                }
+
+            }
         }
         input:nth-child(7):hover{
             background-color:rgb(121, 111, 99);
             transition: 1s;
             cursor:pointer;
         }
-        h2{
-            grid-area: zona1;
-            margin: auto;
-        }
+            
         label{
             display: flex;
             flex-direction:column;
@@ -77,39 +78,4 @@
             }
         }   
     }
-}
-
-.formulario5 label 
-
-.formulario5 
-.formulario5 label:nth-child(2){
-    grid-area: zona2;
-}
-.formulario5 label:nth-child(3){
-    grid-area: zona3;
-}
-.formulario5 label:nth-child(4){
-    grid-area: zona4;
-}
-.formulario5 label:nth-child(5){
-    grid-area: zona5;
-}
-.formulario5 label:nth-child(6){
-    grid-area: zona6;
-}
-.formulario5 input:nth-child(7){
-    grid-area: zona7;
-    background-color:rgb(160, 148, 131);
-    border: none;
-    padding: 20px;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: 600;
-    color: white;
-    transition: 0.5s;
-}
-.formulario5 input:nth-child(7):hover{
-    background-color:rgb(121, 111, 99);
-    transition: 1s;
-    cursor:pointer;
 }

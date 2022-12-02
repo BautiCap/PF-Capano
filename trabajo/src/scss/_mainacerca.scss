@@ -1,0 +1,80 @@
+.mainacerca{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+                        "main1"
+                        "main2"
+                            ;
+    background-color: rgb(216, 173, 144);
+    @media(max-width:720px){
+        margin-top:120px;
+    }
+    .titulo{
+        grid-area: main1;
+        background-color: rgb(160, 148, 131);
+        width: 50%;
+        padding:20px 0;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        @media(max-width:720px){
+            width: 80%;
+
+        }
+        h1{
+            font-size: clamp(10px,5vw,40px);
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            color: white;
+            font-weight: bold;  
+        }
+    }
+    .galeria{
+        grid-area: main2;
+        width: 90%;
+        display: grid;
+        margin: 10px auto;
+        gap:5px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-areas: 
+                            "img1 img2 img3"
+                            "img7 img4 img5"
+                            "img6 img4 img5"
+                            "img8 img9 img9";
+        @for $var from 1 to 10 {
+            @if $var == 4{
+                .info{
+                    grid-area: img4;
+                    background-color: rgb(160, 148, 131);
+                    display: flex;
+                    align-items: center;
+                    p{
+                        text-align: center;
+                        font-weight:600;
+                        color: white;
+                        margin: 0;
+                        max-width: 100%;
+                        max-height: 100%;
+                        font-size: clamp(10px,2vw,20px);
+                    }
+                }
+            }
+            img:nth-child(#{$var}){
+                grid-area:img#{$var};
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: 1s;
+                }
+            }   
+        }   
+    }
+}   

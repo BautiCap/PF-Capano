@@ -1,5 +1,6 @@
 header{
     z-index: 1000;
+    width: 100%;
     .interior{
         @media(max-width:720px){
             display: flex;
@@ -56,11 +57,12 @@ header{
                     position: fixed;
                     top: 0;
                     left: -250px;
-                    background-color:rgb(238, 189, 157);
+                    background:rgba(102, 94, 84, 0.2);
+                    backdrop-filter:blur(8px);
                     width: 250px;
                     height: 100vh;
                     transition: 0.2s;
-                    border:1px solid rgba(0, 0, 0, 0.301);
+                    border:1px solid rgb(0, 0, 0, 0.301);
                     padding: 0%;
                     margin: auto;
                     &:hover{
@@ -112,21 +114,21 @@ header{
                     }
                 }
                 li:hover .hijos{
-                    display:block ;
+                    display:block;
                 }
                 .hijos{
                     display:none;
-                    background:rgb(160, 148, 131);
+                    background: rgba(102, 94, 84, 0.2);
+                    backdrop-filter:blur(8px);
                     position: absolute;
                     overflow: hidden;
                     width: auto;
                     padding: 0%;
                     li{
-                        margin: auto;
-                        a{
-                            display: block ;
-                         
-                        }
+                        display: flex ;
+                        flex-direction: column;
+                        align-items:flex-start;
+                           
                     }
                 }
             }  
