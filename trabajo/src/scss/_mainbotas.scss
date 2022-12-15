@@ -10,16 +10,19 @@
                          "img4"
                          "img5";
     background-color: rgb(216, 173, 144);
+    
     .contenedor{
         @media(max-width:1000px){
-            grid-area: img4;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            justify-items: center;
+            justify-items: center;   
         }
+        @media(max-width:720px){
+            margin-top:120px;
+        }   
         margin: 30px 0;
-        grid-area: img4;
+        grid-area: img1;
         display: grid;
         justify-items: center;
         gap: 10px;

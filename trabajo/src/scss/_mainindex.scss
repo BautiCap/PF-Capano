@@ -16,6 +16,7 @@
         width: 90%;
         grid-area: img1;
         margin: auto;
+        z-index: 1;
     }
     .imgsecundarias{
         @media(max-width:910px){

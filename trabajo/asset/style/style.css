@@ -19,16 +19,25 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
-  z-index: -1;
   background-color: rgb(255, 158, 174);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   grid-template-areas: "nav" "main" "footer";
 }
+body .loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.705);
+  position: fixed;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 header {
-  z-index: 1000;
+  z-index: 2;
   width: 100%;
 }
 header .interior {
@@ -183,6 +192,7 @@ header .interior .navegacion ul .hijos li {
   width: 90%;
   grid-area: img1;
   margin: auto;
+  z-index: 1;
 }
 @media (max-width: 720px) {
   .mainindex .carrusel {
@@ -1811,7 +1821,7 @@ footer .pie .contacto2 i {
 }
 .mainbotas .contenedor {
   margin: 30px 0;
-  grid-area: img4;
+  grid-area: img1;
   display: grid;
   justify-items: center;
   gap: 10px;
@@ -1821,11 +1831,15 @@ footer .pie .contacto2 i {
 }
 @media (max-width: 1000px) {
   .mainbotas .contenedor {
-    grid-area: img4;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
+  }
+}
+@media (max-width: 720px) {
+  .mainbotas .contenedor {
+    margin-top: 120px;
   }
 }
 .mainbotas .contenedor .card1 {

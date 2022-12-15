@@ -7,12 +7,21 @@ body::-webkit-scrollbar-thumb{
 }
 
 body{
-    z-index: -1;
     background-color: rgba(255, 158, 174,);
     display: grid;
     grid-template-columns:1fr;
     grid-template-rows:auto auto auto;
     grid-template-areas: "nav"
                          "main"
-                         "footer";    
+                         "footer";
+    .loading{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 }
